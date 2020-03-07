@@ -13,7 +13,7 @@ Aplicatia numita GoMaR (Good Manners Recommender) reprezinta suportul menit a le
 1.Utilizatorii ce doresc sa se inregistreze pot intra pe pagina de register unde vor trebui sa introduca adresa de e-mail,un nume de 
 utilizator si o parola. Dupa aceea, ei vor fi redirectionati la o pagina unde vor alege categoriile initiale.
 
-2. Utilizatorii autentificati vor fi trimisi la o alta pagina principala ce va contine informatii. La apasarea butonului de test,
+2.Utilizatorii autentificati vor fi trimisi la o alta pagina principala ce va contine informatii. La apasarea butonului de test,
 ei vor fi redirectionati la alte pagini,precum pagina de teste.
 
 3.Administratorii au acces la informatii si comenzi care nu sunt existente la utilizatorii obisnuiti, de exemplu sa modifice intrebari la teste, sa stearga utilizatori,etc.
