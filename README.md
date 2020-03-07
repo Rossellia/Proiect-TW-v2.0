@@ -16,6 +16,8 @@ utilizator si o parola. Dupa aceea, ei vor fi redirectionati la o pagina unde vo
 2. Utilizatorii autentificati vor fi trimisi la o alta pagina principala ce va contine informatii. La apasarea butonului de test,
 ei vor fi redirectionati la alte pagini,precum pagina de teste.
 
+3.Administratorii au acces la informatii si comenzi care nu sunt existente la utilizatorii obisnuiti, de exemplu sa modifice intrebari la teste, sa stearga utilizatori,etc.
+
 ### Tehnologii
 
 Cel mai probabil se va lucra in PHP si Javascript, iar ca baza de date vom folosi MySql.
