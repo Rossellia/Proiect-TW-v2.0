@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.603), rgba(255, 255, 255, 0.603)),url("penquill.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.315), rgba(255, 255, 255, 0.363)),url("penquillimg.jpg");
     background-repeat: inherit;
     display: block;
     text-align: center;
@@ -45,8 +45,9 @@ form {
 
 .column {
     float: left;
-    width: 50%;
-    padding:50px;
+    width: 100%;
+    padding:10px;
+    font-size: 1.2em;
     
     
   }
@@ -85,7 +86,7 @@ form {
     border-color: black;
     border-style: solid;
     background-color: rgb(182, 225, 236);
-    border-width: 2px;
+    border-width: 1px;
 }
 
 
@@ -151,12 +152,12 @@ form {
   }
 
 
-  @media (max-height: 1400px){
+  @media (min-height: 750px) and (max-width:1200px){
 
     .form-submit-button {
         margin-top: 0px;
         background: rgb(20, 1, 18);
-        color: rgb(200, 229, 231);
+        color: rgb(78, 183, 190);
         border-style: outset;
         border-color: rgb(0, 0, 0);
         height: 25px;
@@ -179,6 +180,53 @@ form {
         text-shadow:none;
     
     }
+
+    form {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.729), rgba(255, 255, 255, 0.729)),url("int.jpg");
+        background-repeat: inherit;
+        margin: 10px;
+        display: inline-block;
+        box-sizing: border-box;
+        background-color: rgb(243, 246, 247);
+        border-radius: 25px;
+        height:750px;
+        overflow-y:auto
+        
+    }
+  
+    .container {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        position: relative;
+    
+      }
+  
+    .container input {
+        position: relative;
+        opacity: 0;
+        cursor: pointer;
+     }
+    
+    
+      .checkmark {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 15px;
+        width: 15px;
+        opacity:1000;
+        background-color: white;
+        border-radius: 10%;
+      }
+      
+      .container:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
+      
+      .container input:checked ~ .checkmark {
+        background-color: rgb(45, 146, 153);
+      }
 }
 
 @media (max-width: 500px){
@@ -209,65 +257,54 @@ form {
         text-shadow:none;
     
     }
-
+    
     form {
         background-image: linear-gradient(rgba(255, 255, 255, 0.729), rgba(255, 255, 255, 0.729)),url("int.jpg");
         background-repeat: inherit;
-        padding-bottom: 30px;
-        padding-right: 30px;
-        padding-left: 30px;
-        margin: 30px;
-        display: block;
+        padding-bottom: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
+        margin: 10px;
+        display: inline-block;
         box-sizing: border-box;
         background-color: rgb(243, 246, 247);
         border-radius: 25px;
         
     }
+
+    .container {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        position: relative;
     
-    .column {
-        float: left;
-        width: 100%;
-        padding:50px;
-        
-        
+      }
+  
+    .container input {
+        position: relative;
+        opacity: 0;
+        cursor: pointer;
+     }
+    
+    
+      .checkmark {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 15px;
+        width: 15px;
+        opacity:1000;
+        background-color: white;
+        border-radius: 10%;
       }
       
-      .row::after {
-        content: "";
-        display: table;
-        clear: both;
-        text-align: center;
-        
+      .container:hover input ~ .checkmark {
+        background-color: #ccc;
       }
-    
-    
-    .answer_test {
-        padding-right:20px;
-        padding-bottom: 15px;
-        padding-top: 15px;
-        margin-bottom:15px;
-        display: block;
-        box-sizing: border-box;
-        text-align: center;
-        border-color: rgb(143, 203, 218);
-        border-style: solid;
-        border-width: 1px;
-        
-        
-    }
-    .answer_test:hover {
-        padding-right:20px;
-        padding-bottom: 15px;
-        padding-top: 15px;
-        margin-bottom:15px;
-        display: block;
-        box-sizing: border-box;
-        text-align: center;
-        border-color: black;
-        border-style: solid;
-        background-color: rgb(182, 225, 236);
-        border-width: 2px;
-    }
+      
+      .container input:checked ~ .checkmark {
+        background-color: rgb(45, 146, 153);
+      }
     
     
 }
@@ -300,65 +337,53 @@ form {
         text-shadow:none;
     
     }
-
+    
     form {
         background-image: linear-gradient(rgba(255, 255, 255, 0.729), rgba(255, 255, 255, 0.729)),url("int.jpg");
         background-repeat: inherit;
         padding-bottom: 10px;
         padding-right: 10px;
         padding-left: 10px;
-        margin: 30px;
-        display: block;
+        margin: 10px;
+        display: inline-block;
         box-sizing: border-box;
         background-color: rgb(243, 246, 247);
         border-radius: 25px;
         
     }
+
+    .container {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        position: relative;
     
-    .column {
-        float: left;
-        width: 100%;
-        padding:50px;
-        
-        
+      }
+  
+    .container input {
+        position: relative;
+        opacity: 0;
+        cursor: pointer;
+     }
+    
+    
+      .checkmark {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 15px;
+        width: 15px;
+        opacity:1000;
+        background-color: white;
+        border-radius: 10%;
       }
       
-      .row::after {
-        content: "";
-        display: table;
-        clear: both;
-        text-align: center;
-        
+      .container:hover input ~ .checkmark {
+        background-color: #ccc;
       }
-    
-    
-    .answer_test {
-        padding-right:20px;
-        padding-bottom: 15px;
-        padding-top: 15px;
-        margin-bottom:15px;
-        display: block;
-        box-sizing: border-box;
-        text-align: center;
-        border-color: rgb(143, 203, 218);
-        border-style: solid;
-        border-width: 1px;
-        
-        
-    }
-    .answer_test:hover {
-        padding-right:20px;
-        padding-bottom: 15px;
-        padding-top: 15px;
-        margin-bottom:15px;
-        display: block;
-        box-sizing: border-box;
-        text-align: center;
-        border-color: black;
-        border-style: solid;
-        background-color: rgb(182, 225, 236);
-        border-width: 2px;
-    }
-    
+      
+      .container input:checked ~ .checkmark {
+        background-color: rgb(45, 146, 153);
+      }
     
 }
