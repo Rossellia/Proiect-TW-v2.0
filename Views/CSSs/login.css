@@ -4,7 +4,7 @@
 /*Top Navigation Bar specifications*/
 .topnav{
     overflow: hidden;
-    background-image: linear-gradient(#1589b7, #003b70);
+    background-image: linear-gradient(#5b6877, #39414b);
     margin: 0;
     padding-left: 15%;
     padding-right: 15%;
@@ -18,7 +18,7 @@
 
 /*Font for the title (EZ Archiver)*/
 @font-face {font-family: titleFont;
-    src: url('../Fonts/CalligraPhillipW00Reg.ttf') format('truetype');
+    src: url('../Fonts/Merienda/Merienda-Regular.ttf') format('truetype');
 }
 
 /*Title from the Top Navigation Bar (the one on the left) specifications (EZ Archiver)*/
@@ -26,7 +26,7 @@
     font-family: titleFont;
     font-weight: 100;
     font-size: 28px;
-    padding: 0px 16px;
+    padding: 0px 0px;
     color: whitesmoke;
     display: inline-block;
 }
@@ -41,12 +41,12 @@
     float:right;
 }
 .topnav a:hover{
-    background-image:linear-gradient(#70cdd0, #1589b7) ;
+    background-image:linear-gradient(#8599b1, #414a55) ;
 }
 
 /*Current link specifications*/
 .active {
-    background-image: linear-gradient(#003b70, #1589b7);
+    background-image: linear-gradient(#39414b, #5b6877);
     
 }
 
@@ -59,6 +59,19 @@
 -----------------------------Main body--------------------------
 ****************************************************************/
 
+
+
+main{
+    width: 100%;
+    height: 90%;
+    margin: auto;
+    display: grid;
+    grid-column-gap: 1em;
+    justify-content: center;
+    text-align: center;
+    color: whitesmoke;
+    /* overflow: auto; */
+}
 
 html, body{
     background-image: url("../Pics/background_faded.png");
@@ -73,17 +86,6 @@ html, body{
     /* text-align:center; */
     margin:auto;
 
-}
-main{
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    display: grid;
-    grid-column-gap: 1em;
-    justify-content: center;
-    text-align: center;
-    color: whitesmoke;
-    /* overflow: auto; */
 }
 
 form{
@@ -111,6 +113,8 @@ main h3{
     font-weight: bold;
     color: whitesmoke;
     margin: 4%;
+    margin-bottom: 0;
+    height: fit-content;
 }
 
 #button1{
@@ -147,12 +151,15 @@ main h3{
     text-decoration: none;
     display: inline-block;
     font-size: 1.6em;
-    margin: auto;
-    margin-bottom: 1.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
     cursor: pointer;
     width: 65%;
     border-radius: 2em;
     padding: 0.3em;
+    height: fit-content;
   }
 
 #button1:hover{
