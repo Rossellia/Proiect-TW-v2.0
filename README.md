@@ -36,5 +36,9 @@ Tehnologiile folosite sunt:
 
 ## Interactiunea clientului cu serverul
 
-Initial clientul nu este autentificat sau inregistrat.
+Initial clientul nu este autentificat sau inregistrat. Un utilizator poate fi utilizator obisnuit sau administrator. 
+
+Utilizatorul obsinuit se inregistreaza, este trimis la o pagina de alegere a categoriilor initiale, apoi la o pagina pentru un test initial. Dupa aceea este trimis pe pagina de home, unde vede cei mai buni utilizatori in functie de eveniment si categoria de varsta si scorul lui. De asemenea, poate sa faca alte teste alegand evenimentul si apasand butonul de submit. Daca nu vrea sa mai dea niciun test, poate apasa pe butonul de logout pentru a se deloga.
+
+Administratorii au o sectiune de home separata. Acestia pot modifica datele utilizatorilor si adaugare intrebari in baza de date. Pentru delogare, au un buton de logout.
 
