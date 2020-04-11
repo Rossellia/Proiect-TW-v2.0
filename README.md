@@ -38,7 +38,7 @@ Tehnologiile folosite sunt:
 
 Initial clientul nu este autentificat sau inregistrat. Un utilizator poate fi utilizator obisnuit sau administrator. 
 
-Utilizatorul obsinuit se inregistreaza, este trimis la o pagina de alegere a categoriilor initiale, apoi la o pagina pentru un test initial. Dupa aceea este trimis pe pagina de home, unde vede cei mai buni utilizatori in functie de eveniment si categoria de varsta si scorul lui. De asemenea, poate sa faca alte teste alegand evenimentul si apasand butonul de submit. Daca nu vrea sa mai dea niciun test, poate apasa pe butonul de logout pentru a se deloga.
+Utilizatorul obsinuit se inregistreaza, este trimis la o pagina de alegere a categoriilor initiale, apoi la o pagina pentru un test initial. Dupa aceea este trimis pe pagina de home, unde vede cei mai buni utilizatori in functie de eveniment si categoria de varsta si scorul lui. De asemenea, poate sa faca alte teste alegand evenimentul si apasand butonul de submit. Daca nu vrea sa mai dea niciun test, poate apasa pe butonul de logout pentru a se deloga. Daca deja au cont, utilizatorii obisnuiti trebuie sa mearga pe pagina de login si sunt trimisi apoi pe pagina Home.
 
 Administratorii au o sectiune de home separata. Acestia pot modifica datele utilizatorilor si adaugare intrebari in baza de date. Pentru delogare, au un buton de logout.
 
