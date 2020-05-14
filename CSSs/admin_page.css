@@ -1,0 +1,283 @@
+/***************************************************************
+------------------------Navigation Bar--------------------------
+****************************************************************/
+/*Top Navigation Bar specifications*/
+.topnav{
+    overflow: hidden;
+    background-image: linear-gradient(#5b6877, #39414b);
+    margin: 0;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+/*Font for link in the Top Navigation Bar (Home, Archiver, Support)*/
+@font-face {
+    font-family: JosefinSans;
+    src: url('../Fonts/JosefinSans-Light.ttf') format('truetype');
+}
+
+/*Font for the title (EZ Archiver)*/
+@font-face {font-family: titleFont;
+    src: url('../Fonts/Merienda/Merienda-Regular.ttf') format('truetype');
+}
+
+/*Title from the Top Navigation Bar (the one on the left) specifications (GoMaR)*/
+.topnav b{
+    font-family: titleFont;
+    font-weight: 100;
+    font-size: 28px;
+    padding: 0px 0px;
+    color: whitesmoke;
+    display: inline-block;
+}
+
+/*Links from the Top Navigation Bar specifications (Home)*/
+.topnav a{
+    font-family: JosefinSans;
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 13.5px 25px;
+    font-size: 20px;
+    float:right;
+}
+.topnav a:hover{
+    background-image:linear-gradient(#8599b1, #414a55) ;
+}
+
+/*Current link specifications*/
+.active {
+    background-image: linear-gradient(#39414b, #5b6877);
+    
+}
+
+/*Burger Menu specifications*/
+.topnav .icon {
+    display: none;
+}
+
+/****************************************************************
+-----------------------------Main body--------------------------
+****************************************************************/
+
+
+
+
+
+html, body{
+    background-image: url("../Pics/background_faded.png");
+    height: 100%;
+    /* margin: 0; */
+    /* background-color: #dbeef0; */
+    font-family: JosefinSans;
+    text-shadow: 4px 4px 7px black;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* text-align:center; */
+    margin:auto;
+
+}
+
+main{
+  
+    width: 100%;
+    /* height: 100%; */
+    margin: auto;
+    /* display: grid;
+    grid-column-gap: 1em; */
+    justify-content: center;
+    text-align: center;
+    color: whitesmoke;
+
+}
+.pagebox {
+    margin-top:2%;
+    margin-bottom: 1.5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    /* padding-left: 3%;
+    padding-right: 3%; */
+    border-radius: 1%;
+    background-color: #39414bb0;
+    border-style: solid;
+    border-color: rgb(156, 156, 156);
+    border-width: 0.5px;
+    height: 100%;
+    overflow: auto;
+}
+
+.pageboxcontent {
+    height: 15em;
+    padding-bottom: 5%;
+    padding-left: 0%;
+    padding-right: 0%;
+    margin:0%;
+    border-radius: 1%;
+}
+
+.pageboxcontent2 {
+
+    padding-bottom: 5%;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 2%;
+    margin:0%;
+
+    
+
+}
+
+.pagebox h1, h2, button {
+    font-family: JosefinSans;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.tablinks {
+    font-size: 70%;
+}
+
+.pageboxcontent h1{
+    font-size: 100%;
+    margin:3%;
+}
+
+.pagebox h2{
+    font-size: 85%;
+    margin: 3%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.pageboxcontent{
+    font-size: 200%;
+}
+
+ .pagebox h4{
+    text-align: left;
+    padding: 0%;
+    margin: 0;
+}
+
+.pagebox a{
+    display: flex;
+    justify-content: flex-start;
+    /* text-align: left; */
+    padding: 0%;
+    margin: 0;
+}
+
+.pagebox h4{
+    font-size: 110%;
+}
+
+.pagebox a{
+    color: rgb(65, 201, 255);
+    font-size: 90%;
+    margin-bottom: 3%;
+}
+
+.pagebox a:hover{
+    color: red;
+}
+
+.pagebox a:focus{
+    color: red;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid rgba(204, 204, 204, 0);
+    background-color: #86e3ff48;
+    /* margin: 2%; */
+    margin-bottom: 0%;
+    margin-top: 0%;
+    /* border-radius: 1%; */
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: rgba(204, 204, 204, 0);
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1.4% 1.6%;
+    transition: 0.3s;
+    width: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 70%;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #8fbcc793;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.activeTab {
+    background-color: #86e3ffaf;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    height: 95%;
+    display: none;
+    padding: 0%;
+    /* border: 1px solid #ccc; */
+    border-top: none;
+    margin: 2%;
+    margin-top: 0%;
+    /* background-color: #4f5d6123; */
+  }
+
+ 
+
+ .tabcontent h3{
+     margin-top: 0;
+     font-family: JosefinSans;
+     color: whitesmoke;
+     font-size: 55%;
+     padding: 1%;
+     text-align: left;
+     margin: 0;
+ }
+
+.tabcontent .next{
+    /* position: relative; */
+    bottom: 1%;
+    right: 50%;
+    margin: 3%;
+    font-size: 60%;
+    background-image: linear-gradient(#1589b78f, #5ec3eb7c);
+    border-color: darkslategray;
+    border-width: 0.05em;
+    border-radius: 10%;
+    padding: 0.5%;
+    padding-left: 3%;
+    padding-right: 3%;
+    
+}
+
+.tabcontent .next:hover{
+    background-color: #ff7d6cb2;
+}
+
+.searchbar {
+    width: 80%;
+    margin: 2em;
+    padding: 1em;
+    border-radius: 1em;
+    background: whitesmoke;
+    border: none;
+    background: rgba(245, 245, 245, 0.281);
+    /* color: red; */
+}
+
+::placeholder {
+    /* color: rgb(255, 0, 0); */
+    font-family: JosefinSans;
+    background-color: white;
+}

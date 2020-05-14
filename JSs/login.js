@@ -14,6 +14,8 @@ function myFunction() {
 function openTab(evt, tabName) {
     // Declare all variables
     var i, tabcontent, tablinks;
+    text = document.getElementsByClassName("welcometext");
+    text[0].style.display = "none";
     
     // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -30,4 +32,5 @@ function openTab(evt, tabName) {
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " activeTab";
+
   }

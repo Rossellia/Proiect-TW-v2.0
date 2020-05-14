@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="../CSSs/login.css">
     <title>Log in - GoMaR</title>
-    
+    <!-- <?php include '../PHPs/login.php' ?> -->
+
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <script src="../JSs/login.js"></script>
   </head>
@@ -24,18 +25,20 @@
       <main>
         <h1>Having a fancy dinner? <br> Don't know what to do and what not?</h1>
         <h2>We help! Log in, good manners are on the way.</h2>
-        <form action="Archiver_page.html">
+        <form action="user_homepage.phps" method="POST">
           <p>Username*<br>
-          <input type="text" name="firstname" ></p>
+          <input type="text" name="username" ></p>
           <br>
           <p>Password*<br>
           <input type="password" name="password" ></p>
           <br><br>
-          <input  id="button1" type="submit" value="Login">
+          <input  id="button1" type="submit" value="Login" name="login" formaction="user_homepage.php">
           <br><br>
           <!-- <input id="button2" type="submit" formaction="login_admin.html" value="Admin login"> -->
         </form>
         <h3>Don't have an account? Register now!</h3>
-        <a href ='register.html' class="registerButton">Register</a>
+        <a href ='register.php ' class="registerButton">Register</a>
       </main>
   </body>
+
+  
