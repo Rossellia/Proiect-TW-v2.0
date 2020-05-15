@@ -25,14 +25,14 @@
       <main>
         <h1>Having a fancy dinner? <br> Don't know what to do and what not?</h1>
         <h2>We help! Log in, good manners are on the way.</h2>
-        <form action="user_homepage.phps" method="POST">
+        <form action="home.php" method="POST">
           <p>Username*<br>
           <input type="text" name="username" ></p>
           <br>
           <p>Password*<br>
           <input type="password" name="password" ></p>
           <br><br>
-          <input  id="button1" type="submit" value="Login" name="login" formaction="user_homepage.php">
+          <input  id="button1" type="submit" value="Login" name="login" formaction="home.php">
           <br><br>
           <!-- <input id="button2" type="submit" formaction="login_admin.html" value="Admin login"> -->
         </form>

@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../CSSs/register.css ">
     <title>Register - GoMaR</title>
     <?php 
-    include 'categoryController.php'; 
+    include '../PHPs/categoryController.php'; 
     //  unset($_COOKIE['username']);
     //  setcookie('username', '', time() - 3600);?>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
@@ -27,7 +27,12 @@
       <main>
         <h1>Having a fancy dinner? <br> Don't know what to do and what not?</h1>
         <h2>Let's get you started!</h2>
-        <form action="user_homepage2.php" method="POST">
+        <!-- <h3> <?php 
+                if($ok===0) {
+                  print_r($errors);
+                }
+                ?> </h3> -->
+        <form action="initial_category.php" method="POST">
             <p>Choose a username:<br>
             <input type="text" name="username"></p>
             <br>
@@ -35,10 +40,7 @@
             <input type="password" name="password"></p>
             <p>Email adress:<br>
             <input type="text" name="email"></p>
-            <p>Age:<br>
-            <input type="number" name="age"></p>
-            <br><br>
-            <input  id="button1" type="submit" value="Register" name="register" formaction="user_homepage2.php">
+            <input  id="button1" type="submit" value="Register" name="register" formaction="initial_category.php">
             <br><br>
         </form>
       </main>

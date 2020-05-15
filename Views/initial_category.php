@@ -1,3 +1,11 @@
+<?php 
+ require '../PHPs/categoryController.php';
+ if(count($errors)!=0) {
+    $ok=0;
+    header('Location: register.php');
+ }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,7 +23,7 @@
 
     <body>
         <h1>Choose your category</h1>
-        <form action="initial_test.html">
+        <form  action="initial_test.php" method="post">
         <div>
             <p class="info">Please tell us your age category</p>
             <p class="choose">
@@ -159,7 +167,7 @@
             </p>
         </div>
         <div>
-            <input type="submit" value="Submit" class="form-submit-button">
+            <input type="submit" value="Submit" name="Result" class="form-submit-button">
         </div>
         </form>
 
