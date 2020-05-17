@@ -1,7 +1,15 @@
 <?php 
- require '../PHPs/homeController.php';
-
-
+    require '../PHPs/loginController.php';
+    require '../PHPs/homeController.php';
+    require '../DB/db.php';
+    // print_r($errors);
+    if(count($errors)!=0) {
+        header('Location: login.php');
+    }
+    // if (!isset($_COOKIE['age_category']) && isset($_COOKIE['username'])) {
+    //     header('Location: initial_category.php');
+    // }
+    
 ?>
 
 <!DOCTYPE html>
@@ -15,13 +23,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" type="text/css" href="../CSSs/home.css">
-        <title>Home</title>
+        <title>Home - GoMaR</title>
     <body>
         <nav class="topnav" id="myTopnav">
             <b>GoMaR</b>
-            <!-- <a href="../Pages/Support.html">Support</a>
-            <a href="../Pages/Archiver_page.html">Archiver</a>   -->
-            <a class="active" href="login.php">Logout</a>  <!--Pagina pe care se afla User ul in mod curent-->
+            <a href="home2.php">Logout</a>
+            <a class="active" href="home.php">Home</a>
               <i class="fa fa-bars"></i>
           </nav>
         

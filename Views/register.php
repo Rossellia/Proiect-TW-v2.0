@@ -15,10 +15,8 @@
   </head>
   <body>
     <nav class="topnav" id="myTopnav">
-        <b>GoMaR</b>
-        <!-- <a href="../Pages/Support.html">Support</a>
-        <a href="../Pages/Archiver_page.html">Archiver</a>   -->
-        <a class="active" href="HTMLs/register.html">Home</a>  <!--Pagina pe care se afla userul in mod curent-->
+        <b>Register - GoMaR</b>
+        <a class="active" href="register.php">Register</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>

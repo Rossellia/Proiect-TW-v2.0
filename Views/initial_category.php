@@ -1,9 +1,19 @@
 <?php 
  require '../PHPs/categoryController.php';
+ require '../PHPs/initial_testController.php';
  if(count($errors)!=0) {
     $ok=0;
     header('Location: register.php');
  }
+
+ if (isset($_SESSION['age_category'])) {
+    header('Location: home.php');
+}
+
+
+//  if (isset($_COOKIE['age_category'])) {
+//     header('Location: home.php');
+// }
 ?>
 
 <!DOCTYPE html>
@@ -19,9 +29,16 @@
         <link rel="stylesheet" type="text/css" href="../CSSs/initial_category.css">
 
         <title>First focus</title>
-    </head>
+    </head> 
 
     <body>
+    <nav class="topnav" id="myTopnav">
+            <b>Pick what's suitable for you - GoMaR</b>
+            <a class="active" href="home2.php">Log out</a>  <!--Pagina pe care se afla User ul in mod curent-->
+              <i class="fa fa-bars"></i>
+          </nav>
+          
+          <div class="list">
         <h1>Choose your category</h1>
         <form  action="initial_test.php" method="post">
         <div>

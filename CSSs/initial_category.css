@@ -1,3 +1,65 @@
+/***************************************************************
+------------------------Navigation Bar--------------------------
+****************************************************************/
+/*Top Navigation Bar specifications*/
+.topnav{
+  overflow: hidden;
+  background-image: linear-gradient(#5b6877, #39414b);
+  margin: 0;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+/*Font for link in the Top Navigation Bar (Home, Archiver, Support)*/
+@font-face {
+  font-family: JosefinSans;
+  src: url('../Fonts/JosefinSans-Light.ttf') format('truetype');
+}
+
+/*Font for the title (EZ Archiver)*/
+@font-face {font-family: titleFont;
+  src: url('../Fonts/Merienda/Merienda-Regular.ttf') format('truetype');
+}
+
+/*Title from the Top Navigation Bar (the one on the left) specifications (EZ Archiver)*/
+.topnav b{
+  font-family: titleFont;
+  font-weight: 100;
+  font-size: 28px;
+  padding: 0px 0px;
+  color: whitesmoke;
+  display: inline-block;
+  text-align: left;
+}
+
+/*Links from the Top Navigation Bar specifications (Home, Archiver, Support)*/
+.topnav a{
+  font-family: JosefinSans;
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 13.5px 25px;
+  font-size: 20px;
+  float:right;
+}
+.topnav a:hover{
+  background-image:linear-gradient(#8599b1, #414a55) ;
+}
+
+/*Current link specifications*/
+.active {
+  background-image: linear-gradient(#39414b, #5b6877);
+  
+}
+
+/*Burger Menu specifications*/
+.topnav .icon {
+  display: none;
+}
+
+/************/
+
+
+
 * {
 	margin: 0px; 
 	padding: 0px; 
@@ -12,6 +74,7 @@ body {
     position: relative;
 
 }
+
 h1
 {
     box-sizing: border-box;

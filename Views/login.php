@@ -6,17 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="../CSSs/login.css">
     <title>Log in - GoMaR</title>
-    <!-- <?php include '../PHPs/login.php' ?> -->
+    <?php include '../PHPs/loginController.php';
+    if(isset($_SESSION['username']) && isset($_SESSION['password'])) {
+      header('Location: home.php');
+    };
+    if(!isset($_SESSION['age_category']) && isset($_SESSION['username'])) {
+      header('Location: initial_category.php');
+    }
+    // unset all cookies
+  //   if (isset($_SERVER['HTTP_COOKIE'])) {
+  //     $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
+  //     foreach($cookies as $cookie) {
+  //         $parts = explode('=', $cookie);
+  //         $name = trim($parts[0]);
+  //         setcookie($name, '', time()-3600);
+  //         setcookie($name, '', time()-3600, '/');
+  //     }
+  // }
+  // else {
+  
+    
+  // }
+    ?>
 
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <script src="../JSs/login.js"></script>
   </head>
   <body>
     <nav class="topnav" id="myTopnav">
         <b>GoMaR</b>
-        <!-- <a href="../Pages/Support.html">Support</a>
-        <a href="../Pages/Archiver_page.html">Archiver</a>   -->
-        <a class="active" href="HTMLs/login.html">Home</a>  <!--Pagina pe care se afla userul in mod curent-->
+        <a class="active" href="login.php">Log in</a>  <!--Pagina pe care se afla userul in mod curent-->
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
@@ -34,7 +52,6 @@
           <br><br>
           <input  id="button1" type="submit" value="Login" name="login" formaction="home.php">
           <br><br>
-          <!-- <input id="button2" type="submit" formaction="login_admin.html" value="Admin login"> -->
         </form>
         <h3>Don't have an account? Register now!</h3>
         <a href ='register.php ' class="registerButton">Register</a>

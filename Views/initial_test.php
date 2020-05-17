@@ -18,7 +18,7 @@
 
         <link rel="stylesheet" type="text/css" href="../CSSs/initial_test.css">
 
-        <title>Initial Testing</title>
+        <title>Initial test - GoMaR</title>
     </head>
     <body>
         <h1>Here is your first test!</h1>

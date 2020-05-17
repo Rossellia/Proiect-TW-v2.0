@@ -14,14 +14,13 @@
 
         <link rel="stylesheet" type="text/css" href="../CSSs/test.css">
 
-        <title>Here is your test</title>
+        <title>Test - GoMaR</title>
 </head>
 <body>
   <nav class="topnav" id="myTopnav">
       <b>GoMaR</b>
-      <!-- <a href="../Pages/Support.html">Support</a>
-      <a href="../Pages/Archiver_page.html">Archiver</a>   -->
-      <a class="active" href="home.php">Home</a>  <!--Pagina pe care se afla userul in mod curent-->
+      <a href="home.php">Home</a>
+      <a href="home2.php">Log out</a>
         <i class="fa fa-bars"></i>
     </nav>
 
