@@ -1,6 +1,5 @@
 <?php
-error_reporting('E_NOTICE');
-
+    error_reporting('E_NOTICE');
     session_start();
     require '../DB/db.php';
 
@@ -68,7 +67,6 @@ error_reporting('E_NOTICE');
         
 
         if(count($errors)===0) {
-
             $password=password_hash($password,PASSWORD_DEFAULT);
             $token=bin2hex(random_bytes(50));
     

@@ -41,7 +41,7 @@
 
           </div>
 
-          <div id="Format" class="tabcontent">
+          <div id="Format" class="tabcontent2">
             <form action="../PHPs/adminController.php" method='POST'>
               <table>
                 <tr>
@@ -74,29 +74,10 @@
                       // $conn->close();
                   ?>
               </table>
-              <input class="adminButtons" type="submit" name="deleteQ" value="Delete" formaction="admin_page.php">
-            </form>
-            <form action="../PHPs/adminController.php" method='POST'>
-              <p>Question</p>
-              <input type="text" name="question">
-              <p>Answer 1</p>
-              <input type="text" name="answer1">
-              <p>Answer 2</p>
-              <input type="text" name="answer2">
-              <p>Answer 3</p>
-              <input type="text" name="answer3">
-              <p>Answer 4</p>
-              <input type="text" name="answer4">
-              <p>Correct answer</p>
-              <input type="number" name="correctAnswer">
-              <p>Event category</p>
-              <input type="text" name="eventCategory">
-              <p>Test level</p>
-              <input type="number" name="testLevel">
-              <input class="adminButtons" type="submit" name="addQ" value="Add" formaction="admin_page2.php">
+              <input type="submit" name="intrebari" value="Submit" formaction="admin_page2.php">
             </form>
           </div>
-          <h1 class="welcometext">Choose an action from up above.</h1>
+          <!-- <h1 class="welcometext">Choose an action from up above.</h1> -->
         </div>
       </div>
     </main>
