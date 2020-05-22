@@ -1,7 +1,6 @@
 <?php
     require '../DB/db.php';
 
-
     // delete questions
     if(isset($_POST['deleteQ'])) {
         $qQuery2 = "SELECT id_question from tests order by id_question desc limit 1";
@@ -38,7 +37,6 @@
 
         if (($question!='') and ($answer1!='') and ($answer2!='') and ($answer3!='') and ($answer4!='') and
         ($correctAnswer!='') and ($eventCategory!='') and ($testLevel!='')) {
-            echo 'lasa ma naibii';
             $sql="INSERT INTO tests (question,answer_1,answer_2,answer_3,answer_4,right_answer,event_category,
             test_level) VALUES(?,?,?,?,?,?,?,?)";
             $stmt=$conn->prepare($sql);
@@ -46,29 +44,5 @@
                    $correctAnswer,$eventCategory,$testLevel);
             $stmt->execute();
         }
-        else {
-            echo 'lasa ma dreq';
-        }
-
-        // if($question!='')
-        //  if($answer1!='')
-        //   if($answer2!='')
-        //    if($answer3!='')
-        //     if($answer4!='')
-        //      if($correctAnswer!='')
-        //       if($eventCategory!='')
-        //        if($testLevel!='') {
-        //         $sql="INSERT INTO tests (question,answer_1,answer_2,answer_3,answer_4,right_answer,event_category,
-        //         test_level) VALUES(?,?,?,?,?,?,?,?)";
-        //         $stmt=$conn->prepare($sql);
-        //         $stmt->bind_param('ssssssss',$question,$answer1,$answer2,$answer3,$answer4,
-        //                $correctAnswer,$eventCategory,$testLevel);
-        //         $stmt->execute();
-        //        }
-        //        else {
-        //            echo 'nu merge';
-        //        }
-
-
     }
 ?>

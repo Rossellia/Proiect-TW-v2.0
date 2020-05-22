@@ -34,9 +34,103 @@
           </div>
 
           <div id="Upload" class="tabcontent">
-            <input class="searchbar" type="text" placeholder="Search user.." name="search">
+            <form id="formSearch" action="../PHPs/adminController.php" method='POST'>
+              <input class="searchbar" type="text" placeholder="Search user.." name="search">
+              <input class="adminButtons" type="submit" name="searchU" value="Search" formaction="admin_page.php">
+              <?php
+    require '../DB/db.php';
 
+    // search user
+    if(isset($_POST['searchU'])) {
+        if(!empty($_POST['search'])) {
+            $username = $_POST['search'];
+            setcookie('username', $username, time() + 3600, '/' );
+            $userQuery = "SELECT username from users WHERE username=? LIMIT 1";
+            $stmt=$conn->prepare($userQuery);
+            $stmt->bind_param('s',$username);
+            $stmt->execute();
+            $result=$stmt->get_result();
+            $userCount=$result->num_rows;
+            $stmt->close();
+            if($userCount>0) {
+                echo '
+                <p>Modify ' . $username. '\'s info</p>
+                <br>
+                <form action="../PHPs/adminController.php" method=\'POST\'>
+                  <p class="textAdd">New password</p>
+                  <input class="userModify" type="text" name="userPass">
+                  <p class="textAdd">New email adress</p>
+                  <input class="userModify" type="text" name="userEmail">
+                  <br><br>
+                  <input class="adminButtons" type="submit" name="modifyUser" value="Modify" formaction="admin_page.php">
+                </form>';
+            }
+            else {
+                echo '<p>No user with this username found.</p>';
+            }
+        }
+    }
 
+    if(isset($_POST['modifyUser'])) {
+      if(isset($_POST['userPass']) && isset($_POST['userEmail']) && !empty($_POST['userPass']) && !empty($_POST['userEmail'])) {
+        $pass=$_POST['userPass'];
+        $email=$_POST['userEmail'];
+        echo $pass;
+        echo $email;
+        $updateQuery = "UPDATE users SET password=?, email=? WHERE username=?";
+        $stmt2=$conn->prepare($updateQuery);
+        $username=$_COOKIE['username'];
+        // echo $username;
+        $stmt2->bind_param('sss',$pass,$email,$username);
+        $stmt2->execute();
+        if($stmt2->error) {
+          echo '<p>Password or email could not be modified.</p>';
+        }
+        else {
+          echo '<p>Password and email modified!</p>';
+        }
+        $stmt2->close();
+      }
+      
+    else { 
+      echo 'else';
+      if(isset($_POST['userEmail']) && !empty($_POST['userEmail']) && empty($_POST['userPass'])) {
+        $email=$_POST['userEmail'];
+        $updateQuery = "UPDATE users SET email=? WHERE username=?";
+        $stmt2=$conn->prepare($updateQuery);
+        $username=$_COOKIE['username'];
+        // echo $username;
+        $stmt2->bind_param('ss',$email,$username);
+        $stmt2->execute();
+        if($stmt2->error) {
+          echo '<p>Email could not be modified.</p>';
+        }
+        else {
+          echo '<p>Email modified!</p>';
+        }
+        $stmt2->close();
+      }
+      else if(isset($_POST['userPass']) && !empty($_POST['userPass']) && empty($_POST['userEmail'])) 
+      {
+        $pass=$_POST['userPass'];
+        $updateQuery = "UPDATE users SET password=? WHERE username=?";
+        $stmt2=$conn->prepare($updateQuery);
+        $username=$_COOKIE['username'];
+        // echo $username;
+        $stmt2->bind_param('ss',$pass,$username);
+        $stmt2->execute();
+        if($stmt2->error) {
+          echo '<p>Password could not be modified.</p>';
+        }
+        else {
+          echo '<p>Password modified!</p>';
+        }
+        $stmt2->close();
+      }
+    }
+  }
+    ?>
+    
 
 
           </div>
@@ -76,24 +170,24 @@
               </table>
               <input class="adminButtons" type="submit" name="deleteQ" value="Delete" formaction="admin_page.php">
             </form>
-            <form action="../PHPs/adminController.php" method='POST'>
-              <p>Question</p>
-              <input type="text" name="question">
-              <p>Answer 1</p>
-              <input type="text" name="answer1">
-              <p>Answer 2</p>
-              <input type="text" name="answer2">
-              <p>Answer 3</p>
-              <input type="text" name="answer3">
-              <p>Answer 4</p>
-              <input type="text" name="answer4">
-              <p>Correct answer</p>
-              <input type="number" name="correctAnswer">
-              <p>Event category</p>
-              <input type="text" name="eventCategory">
-              <p>Test level</p>
-              <input type="number" name="testLevel">
-              <input class="adminButtons" type="submit" name="addQ" value="Add" formaction="admin_page2.php">
+            <form id="formAdd" action="../PHPs/adminController.php" method='POST'>
+              <p class="textAdd">Question</p>
+              <input class="inputAdd" type="text" name="question">
+              <p class="textAdd">Answer 1</p>
+              <input class="inputAdd" type="text" name="answer1">
+              <p class="textAdd">Answer 2</p>
+              <input class="inputAdd" type="text" name="answer2">
+              <p class="textAdd">Answer 3</p>
+              <input class="inputAdd" type="text" name="answer3">
+              <p class="textAdd">Answer 4</p>
+              <input class="inputAdd" type="text" name="answer4">
+              <p class="textAdd">Correct answer</p>
+              <input class="inputAdd" type="number" name="correctAnswer">
+              <p class="textAdd">Event category</p>
+              <input class="inputAdd" type="text" name="eventCategory">
+              <p class="textAdd">Test level</p>
+              <input class="inputAdd" type="number" name="testLevel">
+              <input class="adminButtons" id="buttonAdd" type="submit" name="addQ" value="Add" formaction="admin_page.php">
             </form>
           </div>
           <h1 class="welcometext">Choose an action from up above.</h1>

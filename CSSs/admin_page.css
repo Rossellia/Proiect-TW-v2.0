@@ -81,7 +81,7 @@ html, body{
 main{
   
     width: 100%;
-    /* height: 100%; */
+    height: 85%;
     margin: auto;
     /* display: grid;
     grid-column-gap: 1em; */
@@ -97,7 +97,7 @@ main{
     margin-right: 15%;
     /* padding-left: 3%;
     padding-right: 3%; */
-    border-radius: 1%;
+    border-radius: 1em;
     background-color: #39414bb0;
     border-style: solid;
     border-color: rgb(156, 156, 156);
@@ -107,6 +107,7 @@ main{
 }
 
 .pageboxcontent {
+    font-size: 120%;
     height: 15em;
     padding-bottom: 5%;
     padding-left: 0%;
@@ -138,7 +139,7 @@ main{
 }
 
 .pageboxcontent h1{
-    font-size: 100%;
+    font-size: 150%;
     margin:3%;
 }
 
@@ -150,9 +151,6 @@ main{
 
 }
 
-.pageboxcontent{
-    font-size: 100%;
-}
 
  .pagebox h4{
     text-align: left;
@@ -208,7 +206,7 @@ main{
     transition: 0.3s;
     width: 50%;
     color: rgb(255, 255, 255);
-    font-size: 70%;
+    font-size: 120%;
   }
   
   /* Change background color of buttons on hover */
@@ -280,4 +278,29 @@ main{
     /* color: rgb(255, 0, 0); */
     font-family: JosefinSans;
     background-color: white;
+}
+
+table {
+    padding: 5%;
+}
+
+.inputAdd {
+    width: 100%;
+}
+
+#formAdd {
+    text-align: left;
+}
+
+.textAdd {
+    margin-bottom: 0.1em;
+}
+
+#buttonAdd {
+    margin: 1em;
+    margin-left: 0;;
+}
+
+.searchbar {
+    font-size: 100%;
 }
