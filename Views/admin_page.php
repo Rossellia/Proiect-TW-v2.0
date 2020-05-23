@@ -63,6 +63,7 @@
                   <input class="userModify" type="text" name="userEmail">
                   <br><br>
                   <input class="adminButtons" type="submit" name="modifyUser" value="Modify" formaction="admin_page.php">
+                  <input class="adminButtons" type="submit" name="deleteUser" value="Delete user" formaction="admin_page.php">
                 </form>';
             }
             else {
@@ -72,7 +73,7 @@
     }
 
     if(isset($_POST['modifyUser'])) {
-      if(isset($_POST['userPass']) && isset($_POST['userEmail']) && !empty($_POST['userPass']) && !empty($_POST['userEmail'])) {
+      if(/*isset($_POST['userPass']) && isset($_POST['userEmail']) &&*/ !empty($_POST['userPass']) && !empty($_POST['userEmail'])) {
         $pass=$_POST['userPass'];
         $email=$_POST['userEmail'];
         echo $pass;
@@ -127,6 +128,14 @@
         }
         $stmt2->close();
       }
+    }
+  }
+  if(isset($_POST['deleteUser'])) {
+    $username=$_COOKIE['username'];
+    $sql2 = "DELETE FROM users WHERE username='" . $username . "'";
+    echo $sql2;
+    if(mysqli_query($conn, $sql2)) {
+      echo '<p>User ' . $username . ' deleted.</p>';
     }
   }
     ?>
