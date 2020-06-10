@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8">
+        <meta name="description" content="An Online Teacher for Good Manners">
+        <meta name="keywords" content="HTML,CSS,manners">
+        <meta name="author" content="Bucnaru Raluca, Hlusneac Maria">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <title>Scholarly HTML - User Guide</title>
+    <link rel="stylesheet" href="doc_style.css">
+    <script src="js/scholarly.min.js"></script>
+  </head>
+  <body prefix="schema: http://schema.org">
+    <header>
+      <h1>Proiect-TW - Gomar</h1>
+      <p>Realizat de:Bucnaru Raluca A6,<br>
+        Hlusneac Maria A3</p>
+    </header>
+    <div role="navigation">
+      
+    </div>
+    <section id="introduction" role="doc-introduction">
+      <h2>Introducere</h2>
+      <p>
+        Aplicatia numita GoMaR (Good Manners Recommender) reprezinta suportul menit a le oferi utilizatorilor posibilitatea de a-si 
+        imbunatati bunele maniere in anumite situatii in functie de activitatea la care vor sa participe prin completarea unui test initial 
+        pe baza a datelor introduse la inregistrare si apoi completarea altor teste unde isi pot alege alte evenimente la care vor sa participe.
+      </p>
+      <p>
+        Va permite crearea de conturi, astfel oferind un nivel de securitate si privacy. De asemenea, 
+        un user va putea descarca rapoarte CVS care contin date despre scorurile existente pana atunci. 
+      </p>
+      <h3>Rolul fiecarui utilizator</h3>
+      <ol>
+        <li>
+          Utilizatorii ce doresc sa se inregistreze pot intra pe pagina de register unde vor trebui sa introduca adresa de e-mail,un nume de 
+          utilizator si o parola. Dupa aceea, ei vor fi redirectionati la o pagina unde vor alege categoriile initiale.
+        </li>
+        <li>
+          Utilizatorii autentificati vor fi trimisi la o alta pagina principala ce va contine informatii. La apasarea butonului de test,
+          ei vor fi redirectionati la pagina de teste dupa ce isi aleg categoria. Ei pot vedea si anumite tips pentru evenimente anume.
+        </li>
+        <li>
+          Administratorii au acces la informatii si comenzi care nu sunt existente la utilizatorii obisnuiti, de exemplu sa adauge intrebari la teste, sa stearga intrebari,etc.
+        </li>
+      </ol>
+      <h3>Interactiunea clientului cu serverul</h3>
+        <ul>
+            <li>
+                Initial clientul nu este autentificat sau inregistrat. Un utilizator poate fi utilizator obisnuit sau administrator.
+            </li>
+            <li>
+                Utilizatorul obsinuit se inregistreaza, este trimis la o pagina de alegere a categoriilor initiale, apoi la o pagina pentru un test initial. 
+                Dupa aceea este trimis pe pagina de home, unde vede cei mai buni utilizatori in functie de eveniment si categoria de varsta si scorul lui. 
+                De asemenea, poate sa faca alte teste alegand evenimentul si apasand butonul de submit. Daca nu vrea sa mai dea niciun test, poate apasa pe butonul de 
+                logout pentru a se deloga. Daca deja au cont, utilizatorii obisnuiti trebuie sa mearga pe pagina de login si sunt trimisi apoi pe pagina Home.
+            </li>
+            <li>Administratorii au o sectiune de home separata. Acestia pot sterge sau adauga intrebari in baza de date. Pentru delogare, au un buton de logout.</li>
+        </ul>  
+    </section>
+    <section id="ApplicationGuide">
+        <h2>Ghidul aplicatiei</h2>
+        <ul>
+            <li>Register:
+            <ul>
+                <li>Utilizatorul isi scrie datele. I se cere un nume de utilizator, o parola si un email. Emailul trebuie sa fie valid, iar username-ul trebuie sa nu mai 
+                    fie folosit de alta persoana. Este de preferat ca parola sa nu mai fie folosita in alte locuri si sa fie o parola cat de puternica posibil.
+                </li>
+                <li>Cand termina de scris datele poate apasa pe butonul de submit.</li>
+                <li>Este apoi redirectionat la Initial Category.</li>
+            </ul>
+            </li>
+            <li>Initial Category:
+            <ul>
+                <li>Utilizatorul trebuie mai intai sa isi aleaga categora de varsta din care face parte. Se recomanda a se alege 
+                    Child: 0-12 ani, Teen:12-18 ani, Young Adult:18-(25~30) ani, Adult: (25~30)-60 ani, Senior:60+ ani</li>
+                <li>Utilizatorul trebuie sa aleaga categoria de eveniment la care vrea sa participe. Momentan trebuie sa aleaga evenimentul la care vrea 
+                    la momentul actual sa participe. Poate alege mai tarziu si alte evenimente.</li>
+                <li>Utilizatorul poate alege si niste atuuri pe care crede ca le are. Acestea o sa il ajute in calcularea scorului initial. Se recomanda a se alege
+                    doar ce i se pare utilizatorului ca este apropiat de realitate.
+                </li>
+                <li>La apasarea butonului de submit, utilizatorul va fi trimis la pagina initiala de teste.</li>
+            </ul>
+            </li>
+            <li>Initial Test:
+                <ul>
+                    <li>Utilizatorul o sa primeasca patru intrebari de nivelul 0 la care este indemnat sa raspunda. Fiecare intrebare are 4 raspunsuri pe care le poate alege.</li>
+                    <li>Intrebarile au un singur raspuns corenct, insa un utilizator poate alege mai multe raspunsuri daca doreste.</li>
+                    <li>Daca un utilizator alege mai multe raspunsuri, nu i se puncteaza raspunsul oferit.</li>
+                    <li>Poate trimite apoi datele apasand butonul de submit.</li>
+                    <li>Este trimis apoi pe Home.</li>
+                </ul>
+            </li>
+            <li>Home:
+                <ul>
+                    <li>Utilizatorul poate vedea scorurile sale si scorurile maxime ale utilizatorilor din aceeasi categorie de varsta.</li>
+                    <li>Daca doreste sa dea un nou test, are un formular unde alege categoria de eveniment la care doreste sa dea noul test.</li>
+                    <li>Daca doreste sa vada niste informatii care sa il ajute la un anume eveniment, utilizatorul poate completa formularul de sub primul formular, acela fiind cel pentru teste.</li>
+                    <li>In josul paginii poate vedea raspunsurile corecte la intrebarile de la ultimul test sustinut de utilizator.</li>
+                </ul>
+            </li>
+            <li>Tests:
+                <ul>
+                    <li>Ca la initial test, o sa aiba 4 intrebari cu 4 raspunsuri. Dificultatea testului este pe baza scorului la acel eveniment. 
+                        Daca utilizatorul nu a sustinut niciun test la acel eveniment, o sa aiba intrebari de categorie 0. La un scor mai mic decat 10 sau egal cu 10, nivelul 1.
+                        Un scor intre 11 si 20 reprezinta nivelul 2, iar un scor mai mare de 20 reprezinta nivelul 3. </li>
+                    <li>Intrebarile au un singur raspuns corenct, insa un utilizator poate alege mai multe raspunsuri daca doreste.</li>
+                    <li>Daca un utilizator alege mai multe raspunsuri, nu i se puncteaza raspunsul oferit.</li>
+                    <li>Poate trimite apoi datele apasand butonul de submit.</li>
+                    <li>Este trimis apoi pe Home.</li>
+                </ul>
+            </li>
+            <li>Tips:
+                <ul>
+                    <li>Aceasta pagina este menita sa ofere informatii care sa il ajute pe utilizator.</li>
+                    <li>Informatiile se bazeaza pe categoria de varsta a utilizatorului si pe categoria de eveniment aleasa de utilizator.</li>
+                </ul>
+            </li>
+            <li>Admin Home:
+                <ul>
+                    <li>Aceasta pagina este strict dedicata administratorilor. Administratorii pot sa stearga intrebari sau sa adauge intrebari.</li>
+                </ul>
+            </li>
+            <li>Login:
+                <ul>
+                    <li>Pentru utilizatorii care deja au cont, ei nu mai sunt nevoiti sa se inregistreze. Pot sa isi scrie datele, anume username-ul si parola.</li>
+                    <li>Daca un utilizator care este pe pagina de login nu are cont, poate apasa un buton care il trimite pe pagina de register.</li>
+                    <li>Username-ul si parola trebuie sa fie identice cu cele pe care le-a introdus atunci cand si-a facut contul.</li>
+                    <li>La autentificare cu succes, se verifica daca utilizatorul a parcurs pagina de Initial Categori. Daca nu, este trimis pe acea pagina, altfel, este trimis pe Home.</li>
+                </ul>
+            </li>
+            <li>Logout:
+                <ul>
+                    <li>Exista pe pagini un buton pe care scrie Logout in coltul din dreapta, sus. Daca Utilizatorul doreste sa iasa din cont este sfatuit sa apese acel buton.</li>
+                </ul>
+            </li>
+        </ul>
+
+    </section>
+    
+  </body>
+</html>
