@@ -1,0 +1,291 @@
+/***************************************************************
+------------------------Navigation Bar--------------------------
+****************************************************************/
+/*Top Navigation Bar specifications*/
+.topnav{
+  overflow: hidden;
+  background-image: linear-gradient(#5b6877, #39414b);
+  margin: 0;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+/*Font for link in the Top Navigation Bar (Home, Archiver, Support)*/
+@font-face {
+  font-family: JosefinSans;
+  src: url('../Fonts/JosefinSans-Light.ttf') format('truetype');
+}
+
+/*Font for the title (EZ Archiver)*/
+@font-face {font-family: titleFont;
+  src: url('../Fonts/Merienda/Merienda-Regular.ttf') format('truetype');
+}
+
+/*Title from the Top Navigation Bar (the one on the left) specifications (EZ Archiver)*/
+.topnav b{
+  font-family: titleFont;
+  font-weight: 100;
+  font-size: 28px;
+  padding: 0px 0px;
+  color: whitesmoke;
+  display: inline-block;
+  text-align: left;
+}
+
+/*Links from the Top Navigation Bar specifications (Home, Archiver, Support)*/
+.topnav a{
+  font-family: JosefinSans;
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 13.5px 25px;
+  font-size: 20px;
+  float:right;
+}
+.topnav a:hover{
+  background-image:linear-gradient(#8599b1, #414a55) ;
+}
+
+/*Current link specifications*/
+.active {
+  background-image: linear-gradient(#39414b, #5b6877);
+  
+}
+
+/*Burger Menu specifications*/
+.topnav .icon {
+  display: none;
+}
+
+/************/
+
+
+
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.603), rgba(255, 255, 255, 0.603)),url("../Pics/team.png");
+    background-repeat: inherit;
+    display: block;
+    text-align: center;
+    position: relative;
+
+}
+
+h1
+{
+    box-sizing: border-box;
+    padding:15px;
+    color:rgb(53, 3, 24); 
+    display: block; 
+}
+form {
+    padding: 30px;
+    margin: 30px;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.info {
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: normal;
+}
+#ss1 {
+    margin: 0px ;
+}
+#ss2 {
+  margin: 0px ;
+}
+
+.choose
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    font-size: 14pt;
+    margin:10px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+
+.form-submit-button {
+    margin-top: 15px;
+    background: rgb(20, 1, 18);
+    color: rgb(200, 229, 231);
+    border-style: outset;
+    border-color: rgb(0, 0, 0);
+    height: 35px;
+    width: 200px;
+    border-radius: 20px;
+    font: bold 15px arial, sans-serif;
+    text-shadow:none;
+    
+}
+.form-submit-button:hover{
+    margin-top: 15px;
+    background: rgb(80, 175, 182);
+    color: rgb(10, 26, 27);
+    border-style: outset;
+    border-color: rgb(80, 175, 182);
+    height: 35px;
+    width: 200px;
+    border-radius: 20px;
+    font: bold 15px arial, sans-serif;
+    text-shadow:none;
+
+}
+
+.container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    position: relative;
+
+  }
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .radiobtn {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: rgb(232, 243, 243);
+    border-radius: 50%;
+  }
+  
+  .container:hover input ~ .radiobtn {
+    background-color: #ccc;
+  }
+  
+  .container input:checked ~ .radiobtn {
+    background-color:rgb(75, 175, 182);
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: rgb(232, 243, 243);
+    border-radius: 10%;
+  }
+  
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .container input:checked ~ .checkmark {
+    background-color: rgb(75, 175, 182);
+  }
+
+
+  @media (max-height: 900px) and (max-width:1000px){
+
+    .form-submit-button {
+        margin-top: 0px;
+        background: rgb(20, 1, 18);
+        color: rgb(200, 229, 231);
+        border-style: outset;
+        border-color: rgb(0, 0, 0);
+        height: 25px;
+        width: 150px;
+        border-radius: 20px;
+        font: bold 15px arial, sans-serif;
+        text-shadow:none;
+        
+    }
+    .form-submit-button:hover{
+        margin-top: 0px;
+        background: rgb(80, 175, 182);
+        color: rgb(10, 26, 27);
+        border-style: outset;
+        border-color: rgb(80, 175, 182);
+        height: 25px;
+        width: 150px;
+        border-radius: 20px;
+        font: bold 15px arial, sans-serif;
+        text-shadow:none;
+    
+    }
+    form {
+      padding: 10px;
+      margin: 10px;
+      display: inline-block;
+      box-sizing: border-box;
+      background-color: white;
+      border-radius: 25px;
+      font-size: 2em;
+  }
+    h1
+  {
+    box-sizing: border-box;
+    padding:1px;
+    color:rgb(53, 3, 24); 
+    display: block; 
+  }
+}
+@media (min-height: 900px) and (max-width:1200px){
+
+  .form-submit-button {
+      margin-top: 0px;
+      background: rgb(20, 1, 18);
+      color: rgb(200, 229, 231);
+      border-style: outset;
+      border-color: rgb(0, 0, 0);
+      height: 25px;
+      width: 150px;
+      border-radius: 20px;
+      font: bold 15px arial, sans-serif;
+      text-shadow:none;
+      
+  }
+  .form-submit-button:hover{
+      margin-top: 0px;
+      background: rgb(80, 175, 182);
+      color: rgb(10, 26, 27);
+      border-style: outset;
+      border-color: rgb(80, 175, 182);
+      height: 25px;
+      width: 150px;
+      border-radius: 20px;
+      font: bold 15px arial, sans-serif;
+      text-shadow:none;
+  
+  }
+  form {
+    padding: 10px;
+    margin: 30px;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 25px;
+    font-size: 2em;
+}
+h1
+{
+    box-sizing: border-box;
+    padding:0px;
+    color:rgb(53, 3, 24); 
+    display: block; 
+}
+}
+

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8">
+        <meta name="description" content="An Online Teacher for Good Manners">
+        <meta name="keywords" content="HTML,CSS,manners">
+        <meta name="author" content="Bucnaru Raluca, Hlusneac Maria">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <title>Scholarly HTML - Functionalities</title>
+    <link rel="stylesheet" href="doc_style.css">
+    <script src="js/scholarly.min.js"></script>
+  </head>
+  <body prefix="schema: http://schema.org">
+    <header>
+      <h1>Proiect-TW - Gomar</h1>
+      <p>Realizat de:Bucnaru Raluca A6,<br>
+        Hlusneac Maria A3</p>
+    </header>
+    <div role="navigation">
+      
+    </div>
+    <section id="introduction" role="doc-introduction">
+      <h2>Introducere</h2>
+      <p>
+        Aplicatia numita GoMaR (Good Manners Recommender) reprezinta suportul menit a le oferi utilizatorilor posibilitatea de a-si 
+        imbunatati bunele maniere in anumite situatii in functie de activitatea la care vor sa participe prin completarea unui test initial 
+        pe baza a datelor introduse la inregistrare si apoi completarea altor teste unde isi pot alege alte evenimente la care vor sa participe.
+      </p>
+      <p>
+        Va permite crearea de conturi, astfel oferind un nivel de securitate si privacy. De asemenea, 
+        un user va putea descarca rapoarte CVS care contin date despre scorurile existente pana atunci. 
+      </p>
+      <h3>Rolul fiecarui utilizator</h3>
+      <ol>
+        <li>
+          Utilizatorii ce doresc sa se inregistreze pot intra pe pagina de register unde vor trebui sa introduca adresa de e-mail,un nume de 
+          utilizator si o parola. Dupa aceea, ei vor fi redirectionati la o pagina unde vor alege categoriile initiale.
+        </li>
+        <li>
+          Utilizatorii autentificati vor fi trimisi la o alta pagina principala ce va contine informatii. La apasarea butonului de test,
+          ei vor fi redirectionati la pagina de teste dupa ce isi aleg categoria. Ei pot vedea si anumite tips pentru evenimente anume.
+        </li>
+        <li>
+          Administratorii au acces la informatii si comenzi care nu sunt existente la utilizatorii obisnuiti, de exemplu sa adauge intrebari la teste, sa stearga intrebari,etc.
+        </li>
+      </ol>
+    </section>
+    <section id="arhitectura">
+      <h2>Arhitectura</h2>
+      <p>
+      Arhitectura va fi una simpla, alcatuita din baza de date, paginile, (HTML pentru partea I, PHP cu cod HTLM pentru ce-a dea doua componenta), controllere in care executam 
+      operatii ce le vom folosi in pagini, precum inregistrarea datelor, alegerea intrebarilor, etc.
+      </p>
+      <section id ="Controller">
+        <h3>Controller</h3>
+        <p>Controllerul, asa cum l-am facut noi, combina functionalitatile de la controller si model deoarece luam informatiile si facem si operatiile necesare. </p>
+        <h4>Login Controller</h4>
+          <ul>
+            <li>Preia datele de logare introduse de utilizator; </li>
+            <li>Verifica daca sunt introduse date si verifica daca utilizatorul exista.</li>
+            <li>Face urmatoarele redirecturi:
+              <ul>
+                <li>fie exista mesaje de eroare (combinatie username-parola gresita sau username inexistent,etc), ramane la Login;</li>
+                <li>fie redirecteaza spre pagina Home (utilizator logat cu succes care a completat datele initiale);</li>
+                <li>fie redirecteaza spre pagina Initial Category (nu a completat datele initiale).</li>
+                <li>fie redirecteaza spre pagina de Admin Home (utilizatorul este administrator).</li>
+              </ul>
+            </li>
+          </ul>
+        <h4>Register Controller</h4>
+          <ul>
+            <li>Preia datele noului cont ce se doreste a fi creat de catre utilizator;</li>
+            <li>Verifica daca datele introduse sunt corecte</li>
+            <li>Verifica daca nu exista deja un utilizator cu acel username</li>
+            <li>Salveaza datele introduse</li>
+            <li>Face urmatorul redirect:</li>
+              <ul>
+                <li>fie exista mesaj de eroare (date incorecte);</li>
+                <li>fie redirecteaza spre pagina Initial Category (cont creat cu succes).</li>
+              </ul>
+            </li>
+          </ul>
+        <h4>Initial Category Controller</h4>
+          <ul>
+            <li>Preia datele utilizatorului</li>
+            <li>Updateaza campul de age_category al utilizatorului.</li>
+            <li>Trimite la initial test.</li>
+          </ul>
+        <h4>Initial Test Controller</h4>
+          <ul>
+            <li>Pregateste intrebari de nivelul 0</li>
+            <li>Preia raspunsurile date de utilizator</li>
+            <li>Calculeaza un scor</li>
+            <li>Salveaza scorul la categoria respectiva</li>
+            <li>Face redirect la Home</li>
+          </ul>
+        <h4>Test Controller</h4>
+          <ul>
+            <li>Verifica daca utilizatorul are scor la anumita categorie. Daca da, pe baza scorului calculeaza nivelul. Daca nu, nivelul va fi 0</li>
+            <li>Calculeaza un scor pe baza la scorul precedent si la ce a raspuns.</li>
+            <li>Salveaza scorul la categoria respectiva</li>
+            <li>Face redirect la Home</li>
+          </ul>
+        <h4>Home Controller</h4>
+          <ul>
+            <li>Seteaza scorurile utilizatorului</li>
+            <li>Seteaza scorurile maxime la aceeasi categorie de varsta de la fiecare categorie de eveniment</li>
+            <li>Afiseaza aceste scoruri</li>
+            <li>Poate face redirect la Tips sau Test pe baza formularelor</li>
+          </ul>
+        <h4>Admin Home Controller</h4>
+          <ul>
+            <li>Posibilitatea de a adauga intrebari</li>
+            <li>Posibilitatea de a sterge intrebari</li>
+          </ul>
+        <h4>Tips Controller</h4>
+          <ul>
+            <li>Vizualizeaza date de forma tips pe baza la ce s-a introdus in pagina de home.</li>
+          </ul>
+
+          
+      </section>
+      
+      <section id="UseCase">
+        <h3>Diagrama UML</h3>
+        <img src="Pictures/uml.png" alt="Diagrama use case ">
+      </section>
+      </section>
+      <section id="TehnologiiFolosite">
+        <h3>Tehnologii folosite</h3>
+          <ol>
+            <li>
+              HTML5 (Hyper Text Markup Language) pentru a defini structura paginilor Web
+            </li>
+            <li>
+              CSS3 (Cascading Style Sheets) pentru infrumusetarea paginilor
+            </li>
+            <li>
+              Limbaj de programare: PHP7
+            </li>
+            <li>
+              Baza de date: MySQL
+            </li>
+            <li>
+              Web server: Suita XAMPP
+            </li>
+            <li>
+              Javascript
+            </li>
+            <li>
+              Ajax
+            </li>
+          </ol>
+          <p> Descrierea bazei de date </p>
+          <ul>
+            <li>Users:
+              <ul>
+                <li>id = id-ul utilizatorului din baza de date, cheie primara</li>
+                <li>username = userName-ul utilizatorului, fiecare este unic si nu se permit 2 utilizatori cu acelasi nume</li>
+                <li>password = parola utilizatorului criptata</li>
+                <li>email = adresa de mail a utilizatorului</li>
+                <li>age_category = categoria de varsta a utilizatorului</li>
+                <li>is_admin = camp boolean, va contine true daca utilizatorul este si admin, fals altfel</li>
+              </ul>
+            </li>
+            <li>Tests:
+              <ul>
+                  <li>id_uestion = id-ul acelei intrebari in baza de date, cheie primara </li>
+                  <li>question = textul intrebarii</li>
+                  <li>answer_1 = primul raspuns</li>
+                  <li>answer_2 = al doilea raspuns</li>
+                  <li>answer_3 = al treilea raspuns</li>
+                  <li>answer_4 = al patrulea raspuns</li>
+                  <li>right_answer = care este raspunsul corect</li>
+                  <li>event_category = categoria de eveniment</li>
+                  <li>test_level = nivelul testului, 0 pentru incepatori care nu au mai dat test la acea categorie</li>
+              </ul>
+            </li>
+            <li>Scores:
+                <ul>
+                  <li>id_score = id-ul acelui scor</li>
+                  <li>username = username-ul utilizatorului care a obtinut acel scor</li>
+                  <li>event_category = categoria evenimentului la care s-a obtinut acel scor</li>
+                  <li>age_category = categoria de varsta a utilizatorului</li>
+                  <li>score = scorul utilizatorului</li>
+                </ul>
+              </li>
+            <li>Tips:
+                <ul>
+                  <li>id_tip = id-ul acelui tip</li>
+                  <li>age_category = pentru ce categorie de varsta se aplica acele tips</li>
+                  <li>event_category = pentru ce categorie de eveniment se aplica acele tips</li>
+                  <li> data = textul propriu-zis</li>
+                </ul>
+
+
+            </li>
+          </ul>
+        
+      </section>
+      <section id="Taskuri">
+        <h3>Taskuri</h3>
+          <ol>
+            <li>Realizarea scheletului aplicatiei (Maria + Raluca)</li>
+
+            <li>Baza de date (Raluca)</li>
+              <ul>
+                <li>crearea bazei de date</li>
+                <li>crearea tabelelor si popularea acestora</li>
+              </ul>
+
+
+            <li>Operatiuni utilizatori (Maria)</li>
+              <ul>
+                <li>autentificarea utilizatorilor</li>
+                <li>inregistrarea utilizatorilor</li>
+                  <ul>
+                    <li>alegerea unui algoritm de hashing pentru parole</li>
+                    <li>crearea unui token (pentru autorizare)</li>
+                    <li>prevenire SQL injection</li>
+                  </ul>          
+              </ul>
+              <li>Operatiuni utilizatori logati (Raluca)</li>
+              <ul>
+                <li>categorii initiale</li>
+                <li>test initial</li>
+                <li>pagina home pentru utilizatorii obisnuiti</li>
+                <ul>
+                  <li>vizualizare scoruri utilizator</li>
+                  <li>vizualizare scoruri maxime</li>
+                  <li>formular pentru test nou</li>
+                  <li>formular pentru pagina tips</li>
+                </ul>
+                <li>testele propiru-zise</li>
+                <li>tips</li>
+              </ul>
+              <li>Operatiuni admin(Maria)</li>
+
+            <li>Import/Export date (Raluca + Maria)</li>
+              <ul>
+                <li>import/ export scoruri folosind csv</li>
+              </ul>
+            <li>Diagrame UML(Maria)</li>
+            <li>Documentele in formatul HTML Scholarly(Raluca)</li>
+
+          </ol>
+      </section>
+  </body>
+</html>
