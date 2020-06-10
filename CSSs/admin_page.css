@@ -304,3 +304,8 @@ table {
 .searchbar {
     font-size: 100%;
 }
+
+.table {
+    overflow-y: scroll;
+    height: 100%;
+}

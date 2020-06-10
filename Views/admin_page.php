@@ -133,6 +133,7 @@
 
           <div id="Format" class="tabcontent">
             <form action="../PHPs/adminController.php" method='POST'>
+            <div class="table">
               <table>
                 <tr>
                   <th>Delete</th>
@@ -162,6 +163,7 @@
                   $stmt2->close();
                 ?>
               </table>
+              </div>
               <input class="adminButtons" type="submit" name="deleteQ" value="Delete" formaction="admin_page.php">
             </form>
             <form id="formAdd" action="../PHPs/adminController.php" method='POST'>

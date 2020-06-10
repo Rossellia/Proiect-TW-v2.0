@@ -1,6 +1,12 @@
 <?php
     error_reporting('E_NOTICE');
+    $_SESSION['username'] = "";
+    $_SESSION['password'] = "";
+    $_SESSION['email'] = "";
     session_start();
+    $_SESSION['username'] = "";
+    $_SESSION['password'] = "";
+    $_SESSION['email'] = "";
     require '../DB/db.php';
 
     if(isset($_POST['register'])) {
@@ -52,7 +58,7 @@
             $sql="INSERT INTO users (username, email, password, token, isAdmin) VALUES(?,?,?,?,?)";
             $isAdmin = 0;
             $stmt=$conn->prepare($sql);
-            $stmt->bind_param('ssss', $username, $email, $password, $token);
+            $stmt->bind_param('sssss', $username, $email, $password, $token, $isAdmin);
             
             if($stmt->execute()) {
                 $_SESSION['username'] = $username;
@@ -60,5 +66,6 @@
                 $_SESSION['email'] = $email;
             }
         }
+        $stmt->close();
     }
 ?>
