@@ -19,8 +19,9 @@
         <meta name="author" content="Bucnaru Raluca, Hlusneac Maria">
         <meta name="author" content="Image taken from Freepik">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="../CSSs/home.css">
+        <script src="../JSs/login.js"></script>
         <title>Home - GoMaR</title>
     </head>
 
@@ -29,7 +30,9 @@
             <b>GoMaR</b>
             <a href="../PHPs/logoutController.php">Logout</a>
             <a class="active" href="home.php">Home</a>
-              <i class="fa fa-bars"></i>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
           </nav>
         
           <div class="grid-container">

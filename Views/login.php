@@ -18,7 +18,7 @@
     ?>
 
     <script src="../JSs/login.js"></script>
-    <!-- <script src="../JSs/ajaxLogin.js"></script> -->
+    <script src="../JSs/ajaxLogin.js"></script>
   </head>
 
   <body>

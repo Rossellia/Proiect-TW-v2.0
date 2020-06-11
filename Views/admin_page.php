@@ -11,6 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="author" content="Image taken from Freepik">
     <link rel="stylesheet" type="text/css" href="../CSSs/admin_page.css ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Admin - GoMaR</title>
     <script src="../JSs/login.js"></script>
   </head>
@@ -30,8 +31,6 @@
           <div class="tab">
             <button class="tablinks" onclick="openTab(event, 'Upload')">Delete/Modify users</button>
             <button class="tablinks" onclick="openTab(event, 'Format')">Add/Delete questions</button>
-            <!-- <button class="tablinks">Delete/Modify users</button>
-            <button class="tablinks">Add/Delete questions</button> -->
           </div>
 
           <div id="Upload" class="tabcontent">

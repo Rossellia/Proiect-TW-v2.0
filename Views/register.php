@@ -13,11 +13,8 @@
   </head>
   <body>
     <nav class="topnav" id="myTopnav">
-        <b>Register - GoMaR</b>
+        <b>GoMaR</b>
         <a class="active" href="register.php">Register</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
       </nav>
 
       <main>

@@ -19,8 +19,8 @@
         <meta name="keywords" content="HTML,CSS,manners">
         <meta name="author" content="Bucnaru Raluca, Hlusneac Maria">
         <meta name="author" content="Image taken From PngFuel">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <meta name="viewport" content= width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="../CSSs/initial_category.css">
 
         <title>First focus</title>
@@ -28,9 +28,11 @@
 
     <body>
     <nav class="topnav" id="myTopnav">
-            <b>Pick what's suitable for you - GoMaR</b>
-            <a class="active" href="../PHPs/logoutController.php">Log out</a>  <!--Pagina pe care se afla User ul in mod curent-->
-              <i class="fa fa-bars"></i>
+            <b>GoMaR</b>
+            <a href="../PHPs/logoutController.php">Log out</a>  <!--Pagina pe care se afla User ul in mod curent-->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
           </nav>
           
           <div class="list">
